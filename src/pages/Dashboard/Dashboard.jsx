@@ -92,22 +92,26 @@ function Dashboard() {
 
         <h2>Overview</h2>
 
-        <div className="overview-grid">
-          {dashboardData.metrics.map((metric) => (
-            <div
-              key={metric.id}
-              className="metric-card"
-            >
-              <h3 className="metric-value">
-                {metric.value}
-              </h3>
+       <div className="overview-grid">
+  {dashboardData.metrics.map((metric) => (
+    <div
+      key={metric.id}
+      className="metric-card"
+    >
+      <div className="metric-icon">
+        $
+      </div>
 
-              <p className="metric-label">
-                {metric.label}
-              </p>
-            </div>
-          ))}
-        </div>
+      <h3 className="metric-value">
+        {metric.value}
+      </h3>
+
+      <p className="metric-label">
+        {metric.label}
+      </p>
+    </div>
+  ))}
+</div>
 
         <br />
 
